@@ -96,7 +96,7 @@
   </div>
 </template>
 <script>
-import ThreePie from '_c/high-charts/pie.vue'
+import ThreePie from './components/high_pie'
 export default {
   name: '',
   components: {

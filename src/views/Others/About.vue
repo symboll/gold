@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import Child from '_c/child'
+import Child from './child'
 export default {
   name: '',
   components: {

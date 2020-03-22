@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import CountUp from '_c/count-up'
+import CountUp from './components/count_up'
 export default {
   name: '',
   components: {

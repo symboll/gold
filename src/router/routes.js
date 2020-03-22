@@ -46,15 +46,15 @@ const routes = [
   },
   {
     path: '/chair',
-    name: 'HIGHCHARTS',
+    name: 'HighCharts',
     component: Layout,
-    icon: 'el-icon-finished',
+    icon: 'el-icon-extend--chart-',
     children: [
       {
         path: 'count_up',
         name: 'count_up',
-        component: () => import('@/views/CountUp.vue'),
-        meta: { title: '数字滚动', icon: 'el-icon-extend-shuju' }
+        component: () => import('@/views/Charts/CountUp.vue'),
+        meta: { title: '数字滚动', icon: 'el-icon-cpu' }
       },
       {
         path: 'line',
@@ -84,15 +84,23 @@ const routes = [
   },
   {
     path: '/apple_view',
-    name: 'AppleView',
+    name: 'Apple',
     component: Layout,
-    icon: 'el-icon-finished',
-    children: [{
-      path: '',
-      name: 'apple',
-      component: () => import('@/views/AppleView/index.vue'),
-      meta: { title: '知乎', icon: 'el-icon-extend-echarts_heatmap' }
-    }]
+    icon: 'el-icon-apple',
+    children: [
+      {
+        path: 'apple',
+        name: 'apple',
+        component: () => import('@/views/AppleView/user/index.vue'),
+        meta: { title: '用户信息', icon: 'el-icon-user' }
+      },
+      {
+        path: 'topic',
+        name: 'topic',
+        component: () => import('@/views/AppleView/topic/index.vue'),
+        meta: { title: '话题信息', icon: 'el-icon-microphone' }
+      }
+    ]
   }
 ]
 

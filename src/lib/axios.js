@@ -23,7 +23,8 @@ class HttpRequest {
       //   //
       // }
       this.queue[url] = true
-      config.headers['token'] = getToken()
+      // config.headers['token'] = getToken()
+      config.headers['authorization'] = `Bearer ${getToken()}`
       return config
     }, error => {
       return Promise.reject(error)

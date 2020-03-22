@@ -1,16 +1,46 @@
 import axios from './index'
 
-export const login = params => {
+export const loginApi = data => {
   return axios.request({
-    url: '/auth/login',
+    url: '/users/login',
     method: 'post',
-    params
+    data
   })
 }
 
-export const getUserList = () => {
+// export const getUserList = () => {
+//   return axios.request({
+//     url: '/users',
+//     method: 'get'
+//   })
+// }
+export const userList = (data) => {
+  return axios.request({
+    url: '/users/list',
+    method: 'post',
+    data
+  })
+}
+
+export const createUser = (data) => {
   return axios.request({
     url: '/users',
-    method: 'GET'
+    method: 'post',
+    data
+  })
+}
+
+export const getUserInfo = (id) => {
+  return axios.request({
+    url: '/users/' + id,
+    method: 'get'
+  })
+}
+
+export const updateUser = (id, data) => {
+  return axios.request({
+    url: '/users/' + id,
+    method: 'put',
+    data
   })
 }
