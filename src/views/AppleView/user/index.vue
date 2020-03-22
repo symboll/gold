@@ -72,7 +72,7 @@
             type="primary"
             @click="edit(scope.$index, scope.row)">编辑</el-button>
           <el-button
-            v-if="scope.row._id !== loginedUser.id"
+            v-if="scope.row._id !== loginedUser.id && loginedUser.id "
             size="mini"
             type="success"
             @click="addFollower(scope.$index, scope.row)">关注</el-button>
@@ -165,7 +165,6 @@ export default {
         name: '',
         id: ''
       }
-      // loginedname: ''
     }
   },
   components: {
@@ -284,7 +283,8 @@ export default {
     },
     getParticulars (index, row) {
       const id = row._id
-      getUserInfo(id).then(res => {
+      const fields = 'locations;business;employments;educations'
+      getUserInfo(id, fields).then(res => {
         this.showInfo = true
         this.infoForm = res
         this.userId = res._id
@@ -292,7 +292,8 @@ export default {
     },
     edit (index, row) {
       this.editUserId = row._id
-      getUserInfo(this.editUserId).then(res => {
+      const fields = 'locations;business;employments;educations'
+      getUserInfo(this.editUserId, fields).then(res => {
         this.visible = true
         this.purpose = 'edit'
         this.form = res

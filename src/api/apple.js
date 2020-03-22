@@ -30,10 +30,13 @@ export const createUser = (data) => {
   })
 }
 
-export const getUserInfo = (id) => {
+export const getUserInfo = (id, fields) => {
   return axios.request({
     url: '/users/' + id,
-    method: 'get'
+    method: 'get',
+    params: {
+      fields
+    }
   })
 }
 

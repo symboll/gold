@@ -9,7 +9,7 @@ const routes = [
       {
         path: '',
         name: 'points_waves',
-        component: () => import('@/views/pointsWaves.vue'),
+        component: () => import('@/views/Three/pointsWaves.vue'),
         meta: { title: '粒子波动', icon: 'el-icon-extend-echarts_mappie' }
       },
       {
