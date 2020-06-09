@@ -1,13 +1,13 @@
 <template>
   <div>
-      {{ pName }}
+    {{ childValue }}
   </div>
 </template>
 <script>
 export default {
   name: 'child',
   props: {
-    pName: {
+    childValue: {
       type: String,
       default: ''
     }
@@ -31,4 +31,4 @@ export default {
     console.log('child updated')
   }
 }
-</script>>
+</script>

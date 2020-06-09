@@ -124,7 +124,7 @@ export default {
     this.scene = null
     this.camera = null
     this.renderer = null
-    this.particles = []
+    this.particles = null
     this.particle = null
   }
 }

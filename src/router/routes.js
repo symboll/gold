@@ -83,22 +83,22 @@ const routes = [
     ]
   },
   {
-    path: '/apple_view',
-    name: 'Apple',
+    path: '/basic',
+    name: 'basic',
     component: Layout,
-    icon: 'el-icon-apple',
+    icon: 'el-icon-extend-changjingguanli',
     children: [
       {
-        path: 'apple',
-        name: 'apple',
-        component: () => import('@/views/AppleView/user/index.vue'),
-        meta: { title: '用户信息', icon: 'el-icon-user' }
+        path: 'lifecycle',
+        name: 'lifecycle',
+        component: () => import('@/views/Basic/Lifecycle.vue'),
+        meta: { title: 'lifecycle', icon: 'el-icon-extend-threetriangles' }
       },
       {
-        path: 'topic',
-        name: 'topic',
-        component: () => import('@/views/AppleView/topic/index.vue'),
-        meta: { title: '话题信息', icon: 'el-icon-microphone' }
+        path: 'base',
+        name: 'base',
+        component: () => import('@/views/Basic/Base.vue'),
+        meta: { title: 'base', icon: 'el-icon-extend-threetriangles' }
       }
     ]
   }

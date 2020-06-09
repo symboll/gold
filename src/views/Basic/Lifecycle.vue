@@ -1,18 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <el-card class="wrapper">
+    <div class="header">
+      <el-input type="text" v-model="value" />
+      <el-button @click="handeChange">改变</el-button>
+    </div>
 
-    <child
-      :pName="childName"
-    />
-
-    <input type="text" v-model="value">
-    <button @click="handeChange">改变</button>
+    <child :childValue="childValue" />
     <div>{{ fatherValue }}</div>
-  </div>
+  </el-card>
 </template>
 <script>
-import Child from './child'
+import Child from './Child'
 export default {
   name: '',
   components: {
@@ -20,14 +18,14 @@ export default {
   },
   data () {
     return {
-      childName: '子元素',
       value: '',
+      childValue: '子元素',
       fatherValue: ''
     }
   },
   methods: {
     handeChange () {
-      // this.childName = this.value
+      // this.childValue = this.value
       this.fatherValue = this.value
     }
   },
@@ -50,4 +48,12 @@ export default {
     console.log('father updated')
   }
 }
-</script>>
+</script>
+<style lang="scss" scoped>
+.wrapper{
+  margin: 20px;
+  .header{
+    display: flex;
+  }
+}
+</style>

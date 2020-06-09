@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <el-button @click="handleClick">获取信息</el-button>
-  </div>
+  <div>地图</div>
 </template>
 <script>
-// import axios from 'axios'
 export default {
   name: '',
-  methods: {
-    handleClick () {
-      // axios.post('/users', { name: '大大' }).then(res => {
-      //   console.log(res)
-      // })
+  data () {
+    return {
+
     }
+  },
+  mounted () {
+
   }
 }
 </script>
