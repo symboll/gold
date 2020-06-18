@@ -4,10 +4,11 @@ const routes = [
     path: '/',
     name: 'THREE',
     component: Layout,
+    // redirect: to => '/pointsWaves',
     icon: 'el-icon-extend-threetriangles',
     children: [
       {
-        path: '',
+        path: 'pointsWaves',
         name: 'points_waves',
         component: () => import('@/views/Three/pointsWaves.vue'),
         meta: { title: '粒子波动', icon: 'el-icon-extend-echarts_mappie' }
@@ -95,10 +96,22 @@ const routes = [
         meta: { title: 'lifecycle', icon: 'el-icon-extend-threetriangles' }
       },
       {
+        path: 'dataLifecycle',
+        name: 'dataLifecycle',
+        component: () => import('@/views/Basic/DataLifecycle.vue'),
+        meta: { title: 'dataLifecycle', icon: 'el-icon-extend-threetriangles' }
+      },
+      {
         path: 'base',
         name: 'base',
         component: () => import('@/views/Basic/Base.vue'),
         meta: { title: 'base', icon: 'el-icon-extend-threetriangles' }
+      },
+      {
+        path: 'slots',
+        name: 'slots',
+        component: () => import('@/views/Basic/Slots.vue'),
+        meta: { title: 'slots', icon: 'el-icon-extend-threetriangles' }
       }
     ]
   }

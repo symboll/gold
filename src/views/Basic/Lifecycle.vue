@@ -1,12 +1,13 @@
 <template>
-  <el-card class="wrapper">
-    <div class="header">
-      <el-input type="text" v-model="value" />
-      <el-button @click="handeChange">改变</el-button>
+  <el-card class="base_card">
+    <div class="base_card_header">
+      <el-input v-model="value"></el-input>
+      <el-button @click="handeChange" type="primary">Button</el-button>
     </div>
-
-    <child :childValue="childValue" />
-    <div>{{ fatherValue }}</div>
+    <div class="base_card_body">
+      <child :childValue="childValue" @hook:mounted="handleChildMounted" ></child>
+      <div>{{ fatherValue }}</div>
+    </div>
   </el-card>
 </template>
 <script>
@@ -24,12 +25,17 @@ export default {
     }
   },
   methods: {
+    handleChildMounted () {
+      console.log('child mounted @ father component consolelog')
+    },
     handeChange () {
       // this.childValue = this.value
       this.fatherValue = this.value
     }
   },
   beforeCreate () {
+    console.log(1, this.$route)
+    console.log('->', this.$router)
     console.log('father beforeCreate')
   },
   created () {
@@ -50,10 +56,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.wrapper{
-  margin: 20px;
-  .header{
+.base_card{
+  margin: 10px;
+  width: 400px;
+  &_header{
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_body{
+    margin: 10px;
+    >div{
+      height: 40px;
+    }
   }
 }
 </style>

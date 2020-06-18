@@ -13,6 +13,7 @@ export default {
     }
   },
   beforeCreate () {
+    console.log(2, this.$route)
     console.log('child beforeCreate')
   },
   created () {
