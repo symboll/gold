@@ -20,7 +20,6 @@
     "stats-js": "^1.0.1",
     "three": "0.68.0",
     "tweenjs": "1.0.2",
-    "view-design": "^4.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
