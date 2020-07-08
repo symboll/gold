@@ -53,7 +53,7 @@ export default {
       // 渲染器
       this.renderer = new THREE.WebGLRenderer()
       this.renderer.setClearColor(new THREE.Color(0xEEEEEE))
-      this.renderer.setSize((window.innerWidth - 220), window.innerHeight)
+      this.renderer.setSize(window.innerWidth, window.innerHeight)
       this.renderer.shadowMapEnabled = true // 开启 允许阴影映射
 
       // 添加光源
@@ -128,9 +128,9 @@ export default {
     statsInit () {
       this.stats = new Stats()
       this.stats.setMode(0) // 0: fps, 1: ms
-      this.stats.domElement.style.position = 'absolute'
-      this.stats.domElement.style.left = '222px'
-      this.stats.domElement.style.top = '0px'
+      // this.stats.domElement.style.position = 'absolute'
+      // this.stats.domElement.style.left = '0px'
+      // this.stats.domElement.style.top = '0px'
 
       this.$refs.stats.appendChild(this.stats.domElement)
     }

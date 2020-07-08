@@ -44,7 +44,7 @@ export default {
       // 渲染器
       this.renderer = new THREE.WebGLRenderer()
       this.renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0)) // 设置renderer 的背景色
-      this.renderer.setSize((window.innerWidth - 220), window.innerHeight) // 设置renderer 的视图大小
+      this.renderer.setSize(window.innerWidth, window.innerHeight) // 设置renderer 的视图大小
       this.renderer.shadowMapEnabled = true // 开启阴影
 
       // 环境光
@@ -112,7 +112,7 @@ export default {
 
       let j = 0
       for (let i = 0; i < geoms.length; i++) {
-        let cubeMaterial = new THREE.MeshLambertMaterial({ wireframe: true, color: Math.random() * 0xffffff })
+        // let cubeMaterial = new THREE.MeshLambertMaterial({ wireframe: true, color: Math.random() * 0xffffff })
 
         let materials = [
           new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff, shading: THREE.FlatShading }),
@@ -142,9 +142,9 @@ export default {
     statsInit () {
       this.stats = new Stats()
       this.stats.setMode(0) // 0: fps, 1: ms
-      this.stats.domElement.style.position = 'absolute'
-      this.stats.domElement.style.left = '222px'
-      this.stats.domElement.style.top = '0px'
+      // this.stats.domElement.style.position = 'absolute'
+      // this.stats.domElement.style.left = '0px'
+      // this.stats.domElement.style.top = '0px'
 
       this.$refs.stats.appendChild(this.stats.domElement)
     }
