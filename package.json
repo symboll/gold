@@ -11,6 +11,8 @@
     "core-js": "^2.6.5",
     "dat.gui": "^0.7.6",
     "normalize.css": "^8.0.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
     "stats-js": "^1.0.1",
     "three": "0.68.0",
     "tweenjs": "1.0.2",

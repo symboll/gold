@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: '/pointsWaves',
+    path: '/',
     name: 'points_waves',
     component: () => import('@/views/pointsWaves.vue')
   },
