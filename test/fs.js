@@ -1,7 +1,3 @@
-### read
-
-#### 获取当前文件夹下所有文件信息
-```js
 const fs = require('fs')
 const path = require('path')
 
@@ -14,4 +10,5 @@ const readDir = (entry) => {
     })
   )
 }
-```
+
+console.log(readDir(__dirname))

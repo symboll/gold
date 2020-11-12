@@ -12,8 +12,8 @@ module.exports = {
         title: 'fs',
         collapsable: false,
         children: [
-          'fs/readdirsync',
           'fs/read',
+          'fs/write'
         ]
       },
     ]
